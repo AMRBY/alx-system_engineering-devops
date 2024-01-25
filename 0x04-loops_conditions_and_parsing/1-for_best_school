@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#this is a script printing 10 Best School
+for _ in {0..9};
+do
+	echo 'Best School'
+done
