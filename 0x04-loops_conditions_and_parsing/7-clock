@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #this is a script printing 10 Best School
 i=0
-while [ $i -le 23 ]
+while [ $i -le 11 ]
 do
 	echo "Hour: $i"
 	i=$((i+1))
