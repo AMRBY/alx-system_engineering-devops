@@ -4,5 +4,5 @@
 job="4-to_infinity_and_beyond"
 if [ -n "$job" ]
 then
-	pkill "$job"
+	pkill "$job" -f
 fi
