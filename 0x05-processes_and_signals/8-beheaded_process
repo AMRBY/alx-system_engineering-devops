@@ -4,5 +4,5 @@
 job="7-highlander"
 if [ -n "$job" ]
 then
-	pkill "$job" -f
+	pkill -9 "$job" -f
 fi
