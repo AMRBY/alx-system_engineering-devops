@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#this is a script printing 10 Best School
+for i in {1..100};
+do
+	x = $(( $i % 3 ))
+	y = $(( $i % 5 ))
+	if [ "$x" == "$j" ]
+	then
+		echo "integer"
+	fi
+done
