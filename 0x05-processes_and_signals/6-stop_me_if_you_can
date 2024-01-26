@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#my pid script
+
+pkill "4-to_infinity_and_beyond"
