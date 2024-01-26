@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#my pid script
+
+job="7-highlander"
+if [ -n "$job" ]
+then
+	pkill "$job" -f
+fi
