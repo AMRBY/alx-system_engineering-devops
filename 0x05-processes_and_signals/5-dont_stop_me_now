@@ -2,7 +2,7 @@
 #my pid script
 
 job=$(pgrep "4-to_infinity_and_beyond")
-if [ ! -z "$job" ]
+if [ -n "$job" ]
 then
-	kill $job
+	kill "$job"
 fi
