@@ -2,4 +2,4 @@
 #my pid script
 # shellcheck disable=SC2009
 
-pgrep -fl bash
+pgrep -l bash
