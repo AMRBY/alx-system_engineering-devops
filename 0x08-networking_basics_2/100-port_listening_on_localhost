@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#it shows hots ip
+nc -l 98
