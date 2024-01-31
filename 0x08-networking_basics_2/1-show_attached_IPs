@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#it shows hots ip
+ifconfig|grep "inet "| cut -d" " -f10
