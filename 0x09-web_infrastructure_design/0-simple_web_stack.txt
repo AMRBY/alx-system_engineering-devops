@@ -1,0 +1,25 @@
+### Specifics about this infrastructure ###
+
+1) A server is a piece of computer hardware or software (computer program) that provides functionality for other programs or devices, called "clients".
+
+
+2) Domain names serve as the online identity for businesses, organizations, or individuals, allowing users to access websites.
+
+3) Type of DNS record www is an "A" record.
+
+4) Web server controls how web users access to hosted files (via HTTP protocol).
+
+5) An application server exposes business logic to client applications through various protocols.
+
+6) A database is an organized collection of structured information, or data, typically stored electronically in a computer system.
+
+7) The server using to communicate with the computer of the user requesting the website is the web server.
+
+
+### Issues are with this infrastructure ###
+
+1) This architecture have no redundancy systems, it is essentially a flaw in the design of the system, circuit, and component, it poses a potential risk because it could lead to a situation in which just one malfunction or fault causes the whole system to stop working.
+
+2) Downtime when maintenance needed becuase cannot redirect traffic to another system (redundacy)
+
+3) The architecture dont have a load balancer to manage traffic so cannot scale if too much incoming traffic.
