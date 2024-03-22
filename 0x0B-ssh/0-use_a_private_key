@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # ssh with private key
+ssh-copy-id -i ~/.ssh/ubuntu ubuntu@35.175.129.122
 ssh ubuntu@35.175.129.122
