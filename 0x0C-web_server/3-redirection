@@ -3,6 +3,7 @@
 
 red_from="server_name _;"
 red_to="server_name _;\nlocation /redirect_me {\nreturn 301 https://www.youtube.com/watch?v=1jW9aZVS1SI;\n}"
-./1-install_nginx_web_server
+apt-get -y install nginx
+echo "Hello World!" > /var/www/html/index.html
 sed -i "s/$red_from/$red_to/" /etc/nginx/sites_available/default
 service nginx restart
