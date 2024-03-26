@@ -1,15 +1,23 @@
 #!/usr/bin/env bash
-#redirection config
+#installs, configures and starts a web server
 
+apt-get update
+# Installation
 apt-get -y install nginx
+
+# Configuration
+mkdir -p /var/www/html
 echo "Hello World!" > /var/www/html/index.html
+
 echo "server {
-	listen 80 default_server;
-	listen [::]:80 default_server;
-	root /var/www/html;
-	index index.html;
-	location /redirect_me {
-		return 301 https://x.com;
-	}
-}" > /etc/nginx/sites-available/default
+    listen 80 default_server;
+        listen [::]:80 default_server;
+	    root /var/www/html;
+	        index index.html;
+		    location /redirect_me {
+		            return 301 https://x.com/ayaelas;
+			        }
+		}" > /etc/nginx/sites-available/default
+# Starting
 service nginx restart
+
