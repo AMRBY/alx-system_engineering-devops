@@ -2,6 +2,6 @@
 #redirection config
 
 red_from="# server_name_in_redirect off;"
-red_to="# server_name_in_redirect off;\nserver {\nserver_name www.byamr.tech;\nrewrite ^/redirect_me$ http://www.byamr.tech permanent;\n}"
+red_to="# server_name_in_redirect off;\nserver {\nserver_name www.byamr.tech;\nrewrite ^/redirect_me$ www.youtube.com/watch?v=1jW9aZVS1SI permanent;\n}"
 ./1-install_nginx_web_server
 sed -i "s/$red_from/$red_to/" /etc/nginx/nginx.conf
