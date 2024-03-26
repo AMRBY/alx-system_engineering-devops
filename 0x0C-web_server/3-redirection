@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 #redirection config
 
-red_from="# server_name_in_redirect off;"
-red_to="# server_name_in_redirect off;\nserver {\nserver_name www.byamr.tech;\nrewrite ^/redirect_me$ www.youtube.com/watch?v=1jW9aZVS1SI permanent;\n}"
+red_from="server_name _;"
+red_to="server_name _;\nlocation /redirect_me {\nreturn 301 https://www.youtube.com/watch?v=1jW9aZVS1SI;\n}"
 ./1-install_nginx_web_server
-sed -i "s/$red_from/$red_to/" /etc/nginx/nginx.conf
+sed -i "s/$red_from/$red_to/" /etc/nginx/sites_available/default
+
