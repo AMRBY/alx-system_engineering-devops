@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#eroor 404 config
+
+apt-get -y install nginx
+echo "Hello World!" > /var/www/html/index.html
+echo "Ceci n'est pas une page" > /error_page.html
+red_from="server_name _;"
+red_to="server_name _;\nerror_page 404 /error_page.html"
+sed -i "s#$red_from#$red_to#" /etc/nginx/sites-available/default
+service nginx restart
