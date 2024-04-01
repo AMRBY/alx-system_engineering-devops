@@ -5,7 +5,7 @@ apt-get -y install nginx
 mkdir -p /var/www/html
 echo "Hello World!" > /var/www/html/index.html
 red_from="server_name _;"
-red_to="server_name $server_addr;
+red_to="server_name \$server_addr;
 	location /redirect_me {
 		return 301 https://www.youtube.com/;
 	}"
