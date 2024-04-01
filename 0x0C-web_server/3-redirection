@@ -4,6 +4,6 @@
 apt-get -y install nginx
 echo "Hello World!" > /var/www/html/index.html
 red_from="server_name _;"
-red_to="server_name _;\nlocation /redirect_me {\nreturn 301 https://www.youtube.com/watch?v=1jW9aZVS1SI;\n}"
+red_to="server_name _;\n\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=1jW9aZVS1SI;\n}"
 sed -i "s#$red_from#$red_to#" /etc/nginx/sites-available/default
 service nginx restart
