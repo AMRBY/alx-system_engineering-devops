@@ -3,6 +3,6 @@
 apt-get -y install nginx
 echo "Hello World!" > /var/www/html/index.html
 red_from="location / {"
-red_to="location / {\n\t\tadd_header X-Served-By $hostname;\n"
+red_to="location / {\n\t\tadd_header X-Served-By $HOSTNAME;\n"
 sed -i "s#$red_from#$red_to#" /etc/nginx/sites-available/default
 service nginx restart
