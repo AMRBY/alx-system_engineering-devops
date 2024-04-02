@@ -1,7 +1,8 @@
-abc
-cde
-abc\ncde
-abc
-cde
-abc
-	cde
+frontend alx_frontend
+	bind *:80
+	mode http
+	default_backend alx_backend
+backend alx_backend
+	balance roundrobin
+	server 481511-web-01 35.175.129.122:80 check
+	server 481511-web-02 34.224.16.6:80 check
