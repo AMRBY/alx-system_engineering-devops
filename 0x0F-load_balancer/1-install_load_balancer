@@ -10,3 +10,5 @@ backend alx_backend
         server 481511-web-02 34.224.16.6:80 check" >> /etc/haproxy/haproxy.cfg
 
 echo "ENABLED=1" >> /etc/default/haproxy
+
+service haproxy restart
