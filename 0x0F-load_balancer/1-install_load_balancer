@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 #this is load balancer config
+apt-get install -y haproxy
 echo "frontend alx_frontend
         bind *:80
         mode http
