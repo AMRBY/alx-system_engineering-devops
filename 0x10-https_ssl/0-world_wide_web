@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#configure WWW
+
+func () {
+	x=$(dig "$2"."$1" | grep -A1 'ANSWER SECTION:')
+	echo "$x" | awk -F' ' -v var="$2" 'NR==2 {printf "The subdomain %s is a %s record and points to %s\n",var, $4, $5}' 
+}
+if [ -n "$2" ];then
+	func "$1" "$2"
+else
+	for x in "www" "lb-01" "web-01" "web-02";do
+		func "$1" "$x"
+	done
+fi
