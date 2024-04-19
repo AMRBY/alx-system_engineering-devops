@@ -2,5 +2,5 @@
 #backup, archive and compress
 
 today=$(date '+%d-%m-%Y')
-mysqldump -u root > backup.sql
+mysqldump -u root -p "$1" > backup.sql
 tar -caf "$today".tar.gz backup.sql
