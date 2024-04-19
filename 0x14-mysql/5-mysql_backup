@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+-- backup, archive and compress
+
+today = $(date '+%d-%m-%Y')
+mysqldump -u root > backup.sql
+tar -caf $today.tar.gz backup.sql
