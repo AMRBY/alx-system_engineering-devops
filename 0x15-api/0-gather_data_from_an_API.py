@@ -16,6 +16,6 @@ if __name__ == "__main__":
         if response.json()[i]['completed'] is True:
             number += 1
             done.append(response.json()[i]['title'])
-    print(f'Employee \
-            {user.json()["name"]} is done with tasks ({number}/{total}):' end='')
+    print(f'Employee {user.json()["name"]} \
+is done with tasks ({number}/{total}):')
     print(*done, sep="\n")
