@@ -5,8 +5,8 @@ import requests
 from sys import argv
 
 if __name__ == "__main__":
-    di = {}
     js = {}
+    lista = []
 
     user = requests.get(
             f'https://jsonplaceholder.typicode.com/users/{argv[1]}')
@@ -17,9 +17,11 @@ if __name__ == "__main__":
     with open(file_path, 'w', newline="") as f:
 
         for i in range(len(response.json())):
+            di = {}
             di["task"] = response.json()[i]['title']
             di["completed"] = response.json()[i]['completed']
             di["username"] = user.json()['username']
-            js[argv[1]] = di
-            json.dump(js, f)
-            print(js)
+            lista.append(di)
+
+        js[argv[1]] = lista
+        json.dump(js, f)
