@@ -7,7 +7,7 @@ if __name__ == "__main__":
     js = {}
 
     with open('todo_all_employees.json', 'w', newline="") as f:
-        for n in range(1, 3):
+        for n in range(1, 11):
             lista = []
             response = requests.get(
                     f'https://jsonplaceholder.typicode.com/todos/?userId={n}')
