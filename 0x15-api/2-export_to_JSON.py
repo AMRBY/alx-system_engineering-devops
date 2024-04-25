@@ -17,7 +17,6 @@ if __name__ == "__main__":
     with open(file_path, 'w', newline="") as f:
 
         for i in range(len(response.json())):
-        #print(response.json()[i]['title'], response.json()[i]['completed'], user.json()['username'])
             di["task"] = response.json()[i]['title']
             di["completed"] = response.json()[i]['completed']
             di["username"] = user.json()['username']
