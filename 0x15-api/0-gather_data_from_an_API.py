@@ -17,5 +17,5 @@ if __name__ == "__main__":
             number += 1
             done.append(response.json()[i]['title'])
     print(f'Employee \
-            {user.json()["name"]} is done with tasks ({number}/{total}):')
+            {user.json()["name"]} is done with tasks ({number}/{total}):' end='')
     print(*done, sep="\n")
