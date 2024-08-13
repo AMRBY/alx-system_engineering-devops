@@ -6,7 +6,7 @@ import requests
 def number_of_subscribers(subreddit):
     """ number of subscribers"""
     base_url = 'https://www.reddit.com/r/{}/about.json'.format(subreddit)
-    headers = {'User-Agent': 'alx_agent'}
+    headers = {'user-agent': 'amrby'}
     client = requests.session()
     client.headers = headers
     response = requests.get(base_url, allow_redirects=False)
